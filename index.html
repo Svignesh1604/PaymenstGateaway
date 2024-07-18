@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Gateway</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+    <div class="container">
+
+        <button class="toggle-btn" onclick="toggleSidebar()">☰</button>
+        <aside class="navbar" style="background-color: antiquewhite;">
+            <h2 style="color: black;">Pay With</h2>
+            <ul>
+               <strong> <li><a href="#" onclick="showPaymentMethod('bank')" class="active"
+                        style="color: black; background-color: azure;">Bank Transfer</a></li>
+                <strong>
+                    <li><a href="#" onclick="showPaymentMethod('upi')"
+                            style="color: black; background-color: azure;">UPI Id & QR Code</a></li>
+                </strong>
+                <strong>
+                    <li><a href="#" onclick="showPaymentMethod('card')"
+                            style="color: black; background-color: azure;">Card</a></li>
+                </strong>
+                <strong>
+                    <li><a href="#" onclick="showPaymentMethod('gateway')"
+                            style="color: black; background-color: azure;">Payment Gateway
+                            <br>
+                            <div><span class="new-label" style="background-color: green; border-radius: 5px;">NEW</span>
+                            </div>
+                        </a></li>
+                </strong>
+            </ul>
+        </aside>
+        <main class="payment-form">
+            <div id="bank" class="payment-method">
+                <header>
+                    <h1>
+
+                        <h1 style="font-size: 35px; text-align: center;">Enter your Bank details to pay</h1>
+                    </h1>
+                </header>
+                <form>
+                    <div class="form-group">
+                        <h2><label for="bank-number">Bank Name</label></h2>
+                        <input type="text" id="bank-Name" placeholder="Enter your bank name">
+
+                        <h2><label for="bank-number">Bank IFSC Code </label></h2>
+                        <input type="text" id="bank-Ifsc code" placeholder="Enter your IFSC code">
+
+                        <h2><label for="bank-number">Bank Branch</label></h2>
+                        <input type="text" id="bank-branch name" placeholder="Enter your bank Branch">
+
+                    </div>
+                    <button type="submit">Pay & Access to Company WhatsApp</button>
+                </form>
+            </div>
+            <div id="upi" class="payment-method" style="display: none;">
+                <header>
+
+                    <h1 style="font-size: 35px; text-align: center;color: darkslategray;">Scan the QR </h1>
+                </header>
+                <img src="qr code (1).png" alt="QR Code">
+                <strong style="font-size: 30px;color: blue;">OR</strong>
+                <br>
+                <h1>
+                    <p style="color: cadetblue;text-align: center;">UPI ID : </p> gowthamrajp06@oksbi
+                </h1>
+            </div>
+            <div id="card" class="payment-method" style="display: none;">
+                <header>
+                    <h1 style="font-size: 35px; text-align: center;">Enter your Card details to pay</h1>
+                </header>
+                <form>
+                    <div class="form-group">
+                        <h2><label for="card-number">Card Number</label></h2>
+                        <input type="text" id="card-number" placeholder="0000 0000 0000 0000">
+                    </div>
+                    <div class="form-group">
+                        <h2><label for="card-expiry">Card Expiry[Month/Year]</label></h2>
+                        <input type="text" id="card-expiry" placeholder="MM/YY">
+                    </div>
+                    <div class="form-group">
+                        <h2><label for="cvv">CVV</label></h2>
+                        <input type="text" id="cvv" placeholder="•••">
+                    </div>
+                    <button type="submit">Pay $100</button>
+                </form>
+            </div>
+            <div id="gateway" class="payment-method" style="display: none;">
+                <header>
+                    <h1>Payment Gateway</h1>
+                    <p>Payment Option will Available Soon</p>
+                </header>
+            </div>
+        </main>
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>
